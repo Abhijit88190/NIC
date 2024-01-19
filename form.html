@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+   <link rel="stylesheet" href="./form.css">
+<body>
+   <form onsubmit="return myfun()">
+      <div class="formContainer">
+         <h1 align="center">Sign Up Form</h1>
+         <hr>
+         <label for="name"><b>Name</b></label>
+         <input type="text" id="charInput" oninput="validateInput()" placeholder="Enter Name" name="name" required>
+         <label for="email"><b>Email</b></label>
+         <input type="email" id="emailInput" oninput="ValidateEmail()" placeholder="Enter @email_id" name="email" required>
+         <label for="mobileno"><b>Mobile Number</b></label>
+         <input type="tel"  id="intInput" pattern="[0-9]{10}" oninput="validateInput1()" placeholder="Enter 10 digit number" name="mobile" size="10" required>
+         <label for="gender"><b>Gender</b></label><br>
+         <input type="radio" value="Male" name="gender"/>Male
+         <input type="radio" value="Female" name="gender"/>Female
+         <input type="radio" value="Other" name="gender"/>Other<br>
+         <label for="language"><b>Language</b></label><br>
+         <input type="checkbox" value="English" name="language"/>English
+         <input type="checkbox" value="Hindi" name="language"/>Hindi
+         <input type="checkbox" value="Odia" name="language"/>Odia
+         <input type="checkbox" value="Other" name="language"/>Other<br>
+         <label for="address"><b>Address</b></label>
+         <textarea cols="60" rows="5" value="address" required></textarea>
+         <label for="password"><b>Password</b></label>
+         <input type="password" id="password" placeholder="Enter Password" minlength="6" maxlength="10" name="password"value="" required>
+         <span id="messages" style="color: red;"></span><br>
+         <label for="confirmpassword"><b>Confirm Password</b></label>
+         <input type="password" id="passwords"  placeholder="Retype Password" minlength="6" maxlength="10" name="confirmpassword" value="" required>
+         <span id="messages"></span>
+         <label>
+            <input type="checkbox" checked="checked" name="remember" style="marginbottom:15px;"> Remember me
+         </label>
+         <p>By creating an account you agree to our <a href="#" style="color:dodgerblue;">Terms & Privacy</a>.</p>
+         <div>
+            <button type="submit" class="signup">Sign Up</button>
+         </div>
+      </div>
+   </form>
+   <script src="./form.js"></script>
+</body>
+</html>
